@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function asyncTask1() {
+            return new Promise((resolve, reject) => {
+                // 耗时操作完成后，网络请求、IO操作
+                // 得到数据：resolve
+                // let data = ajax请求
+                // resolve（data）
+                setTimeout(function () {
+                    resolve("apple")
+                }, 2000)
+            })
+        }
+
+        asyncTask1().then(function (data) {
+            console.log(data)
+        })
+    </script>
+</body>
+
+</html>
